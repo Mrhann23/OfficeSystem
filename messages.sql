@@ -1,0 +1,7 @@
+CREATE TABLE message (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    admin_reply TEXT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,157 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;          /* Ensure the full height of the viewport */
+    margin: 0;              /* Remove default margin */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Transparent Container */
+.container {
+    width: 50%;
+    max-width: 600px; /* Adjust for a balanced size */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+     /* Add a blur effect for the video background */
+}
+
+/* Header Styling */
+h2 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Set the header font color to white */
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for contrast */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Attendance Table */
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners */
+}
+
+.attendance-table th, .attendance-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Light semi-transparent border */
+}
+
+.attendance-table th {
+    background-color: rgba(51, 51, 51, 0.8); /* Dark semi-transparent background */
+    color: white; /* White font for headers */
+}
+
+.attendance-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Slight highlight on hover */
+}
+
+/* Buttons */
+.delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f44336; /* Red */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for small screens */
+    }
+    .attendance-table th, .attendance-table td {
+        padding: 8px;
+    }
+}
+
+/* Video Background */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures video stays in the background */
+}
+
+/* Overlay Content */
+#content {
+    position: relative;
+    z-index: 1; /* Content remains above the video background */
+}
+
+/* Side Navigation Bar Styling */
+.sidenav {
+    width: 180px; /* Sleek navigation bar width */
+    height: 100vh;
+    background-color: #31394d; /* IT-themed dark blue-gray color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    z-index: 2; /* Ensure the sidebar stays above other content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.sidenav .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidenav .logo img {
+    width: 90%; /* Increased logo size for better visibility */
+    height: auto;
+    border: 3px solid #ffffff; /* White border around the logo */
+    border-radius: 50%; /* Optional: Make the logo circular */
+    padding: 5px; /* Add spacing inside the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the logo */
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav ul li {
+    padding: 10px; /* Reduced padding for smaller buttons */
+    text-align: left;
+}
+
+.sidenav ul li a {
+    color: #ffffff; /* White font for high contrast */
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px; /* Adjusted padding for smaller button size */
+    font-size: 16px; /* Slightly smaller font size for compact look */
+    border-radius: 4px; /* Rounded corners for a modern appearance */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+.sidenav ul li a:hover {
+    background-color: #40485c; /* Slightly lighter shade on hover */
+    transform: scale(1.05); /* Subtle scaling effect for interactivity */
+}

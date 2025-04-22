@@ -1,0 +1,175 @@
+/* Basic reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Video Background */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures the video stays in the background */
+}
+
+/* Overlay Content */
+#content {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+}
+
+/* Chat Container */
+.chat-container {
+    width: 400px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 500px;
+    margin-top: 100px;
+     /* Adds a blur effect for background under the container */
+}
+
+/* Chat Box */
+.chat-box {
+    padding: 20px;
+}
+
+.chat-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Header text color is now white for better visibility */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background for header */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Messages Section */
+.messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border with transparency */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    border-radius: 8px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.username {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.text {
+    display: inline-block;
+    margin-left: 5px;
+    color: #333;
+}
+
+.timestamp {
+    display: block;
+    font-size: 0.8em;
+    color: #aaa;
+    margin-left: 20px;
+}
+
+/* Chat Form */
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better visibility */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chat-form input,
+.chat-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+
+.chat-form button {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #357ab8;
+}
+
+
+/* Side Navigation Bar Styling */
+.sidenav {
+    width: 180px; /* Sleek navigation bar width */
+    height: 100vh;
+    background-color: #31394d; /* IT-themed dark blue-gray color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    z-index: 2; /* Ensure the sidebar stays above other content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.sidenav .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidenav .logo img {
+    width: 90%; /* Increased logo size for better visibility */
+    height: auto;
+    border: 3px solid #ffffff; /* White border around the logo */
+    border-radius: 50%; /* Optional: Make the logo circular */
+    padding: 5px; /* Add spacing inside the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the logo */
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav ul li {
+    padding: 10px; /* Reduced padding for smaller buttons */
+    text-align: left;
+}
+
+.sidenav ul li a {
+    color: #ffffff; /* White font for high contrast */
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px; /* Adjusted padding for smaller button size */
+    font-size: 16px; /* Slightly smaller font size for compact look */
+    border-radius: 4px; /* Rounded corners for a modern appearance */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
+}
+
+.sidenav ul li a:hover {
+    background-color: #40485c; /* Slightly lighter shade on hover */
+    transform: scale(1.05); /* Subtle scaling effect for interactivity */
+}
